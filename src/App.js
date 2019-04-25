@@ -4,11 +4,13 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Detail from './Components/Detail';
 import C404 from './Components/C404';
+import TestContext from './TestContext';
 
 class App extends Component {
   render() {
     return (
       <section>
+        <TestContext />
         <Router>
           <div>
           <Link to={'/home'}>home</Link>
