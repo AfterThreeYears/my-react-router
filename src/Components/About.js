@@ -1,13 +1,21 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from "react";
+import "./About.css";
+import TimerHoc from './TimerHoc';
 
-class About extends Component {
+class SnapshotSample extends PureComponent {
+  componentDidUpdate(prevProps, prevState, prevScrollHeight) {
+
+  }
+
   render() {
     return (
-      <div>
-        About
-      </div>
+      <section>
+        <div className="snapshot-sample" ref={n => (this.rootNode = n)}>
+        </div>
+        {(this.props.time).toLocaleTimeString()}
+      </section>
     );
   }
 }
 
-export default About;
+export default TimerHoc(SnapshotSample);
